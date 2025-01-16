@@ -16,5 +16,7 @@ file(GLOB all_SRCS
 
 include(compiler_flags.cmake)
 
-add_executable(${PROJECT_NAME} ${all_SRCS})
+add_executable(${PROJECT_NAME} ${all_SRCS} "src/day_1/day_1_header.h" "src/day_1/day_1_imp.cpp" "src/stdheaders.h")
 
+# Copy the files in the resources directory to the output directory.
+add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/resources/ $<TARGET_FILE_DIR:${PROJECT_NAME}>)
