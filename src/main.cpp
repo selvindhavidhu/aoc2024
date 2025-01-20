@@ -1,9 +1,9 @@
 #include <iostream>
-#include "day_1/day_1_header.h"
+#include "day_2/day_2_header.h"
 
 int main() {
-    const char inpult_file_path[] = "day_1_part_2_input.txt";
-    std::cout << solve_day_1_part_2(inpult_file_path) << '\n';
+    const char inpult_file_path[] = "day_2_part_1_input.txt";
+    std::cout << solve_day_2_part_1(inpult_file_path) << '\n';
 
     return 0;
 }

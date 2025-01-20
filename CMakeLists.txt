@@ -3,8 +3,8 @@ cmake_minimum_required (VERSION 3.20)
 set(PROJECT_NAME "aoc2024")
 project ("${PROJECT_NAME}" VERSION 1.0.0 LANGUAGES CXX)
 
-# Set the C++ standard to C++17
-set (CMAKE_CXX_STANDARD 17)
+# Set the C++ standard to C++20
+set (CMAKE_CXX_STANDARD 20)
 
 # Add source to this project's executable.
 include_directories(${PROJECT_SOURCE_DIR}/src)
@@ -16,7 +16,7 @@ file(GLOB all_SRCS
 
 include(compiler_flags.cmake)
 
-add_executable(${PROJECT_NAME} ${all_SRCS} "src/day_1/day_1_header.h" "src/day_1/day_1_imp.cpp" "src/stdheaders.h")
+add_executable(${PROJECT_NAME} ${all_SRCS} "src/day_1/day_1_header.h" "src/day_1/day_1_imp.cpp" "src/stdheaders.h" "src/day_2/day_2_header.h" "src/day_2/day_2_imp.cpp")
 
 # Copy the files in the resources directory to the output directory.
 add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/resources/ $<TARGET_FILE_DIR:${PROJECT_NAME}>)
