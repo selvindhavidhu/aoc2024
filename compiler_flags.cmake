@@ -17,7 +17,7 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     # -Wsign-conversion: Warn for implicit conversions that may change the sign of an integer value
     # -Wswitch-default:  Warn whenever a switch statement does not have a default case.
     # -Wno-unknown-pragmas: (2016-07-13) Temporarily added to disable warnings about #pragma unused
-    set(CMAKE_CXX_FLAGS "-std=c++17 -pthread")
+    set(CMAKE_CXX_FLAGS "-std=c++20 -pthread")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstrict-aliasing")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wcast-qual -Wextra -Wfloat-equal")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wformat -Wold-style-cast -Wpedantic")
@@ -43,7 +43,7 @@ elseif(CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # -Wsign-conversion: Warn for implicit conversions that may change the sign of an integer value
     # -Wswitch-default:  Warn whenever a switch statement does not have a default case.
     # -Wno-unknown-pragmas: (2016-07-13) Temporarily added to disable warnings about #pragma unused
-    set(CMAKE_CXX_FLAGS "-std=c++17 -pthread")
+    set(CMAKE_CXX_FLAGS "-std=c++20 -pthread")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstrict-aliasing")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wcast-qual -Wextra -Wfloat-equal")
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wformat -Wold-style-cast -Wpedantic")
