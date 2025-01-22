@@ -404,6 +404,9 @@ FodyWeavers.xsd
 # Local History for Visual Studio Code
 .history/
 
+# VS Code build directory.
+build/
+
 # Windows Installer files from build outputs
 *.cab
 *.msi
