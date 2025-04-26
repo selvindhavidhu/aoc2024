@@ -416,3 +416,6 @@ build/
 
 # JetBrains Rider
 *.sln.iml
+
+# Visual Studio Code build directory.
+build/
