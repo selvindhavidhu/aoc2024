@@ -318,10 +318,6 @@ node_modules/
 *.dsw
 *.dsp
 
-# Visual Studio 6 technical files
-*.ncb
-*.aps
-
 # Visual Studio LightSwitch build output
 **/*.HTMLClient/GeneratedArtifacts
 **/*.DesktopClient/GeneratedArtifacts
@@ -417,5 +413,8 @@ build/
 # JetBrains Rider
 *.sln.iml
 
-# Visual Studio Code build directory.
-build/
+# JetBrains IDE files
+.idea/*
+!.idea/codeStyles/
+!.idea/runConfigurations/
+!.idea/modules.xml
