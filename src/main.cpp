@@ -1,10 +1,10 @@
-#include "day_2/day_2_header.h"
 #include "stdheaders.h"
+#include "day_3/day_3_header.h"
 
 int main() {
-    const char inpult_file_path[] = "day_2_part_1_input.txt";
+    constexpr char input_file_path[] = "day_3_input.txt";
     try {
-        std::cout << solve_day_2_part_2(inpult_file_path) << '\n';
+        std::cout << solve_day_3_part_1(input_file_path) << '\n';
     } catch (const std::runtime_error& ex) {
         std::cerr << ex.what() << std::endl;
     }

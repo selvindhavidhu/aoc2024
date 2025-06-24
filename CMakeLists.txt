@@ -12,11 +12,15 @@ file(GLOB all_SRCS
     "${PROJECT_SOURCE_DIR}/src/*.cpp"
     "${PROJECT_SOURCE_DIR}/src/*.h"
     "${PROJECT_SOURCE_DIR}/src/day_1/*.cpp"
-    "${PROJECT_SOURCE_DIR}/src/day_1/*.h")
+    "${PROJECT_SOURCE_DIR}/src/day_1/*.h"
+    "${PROJECT_SOURCE_DIR}/src/day_2/*.cpp"
+    "${PROJECT_SOURCE_DIR}/src/day_2/*.h"
+    "${PROJECT_SOURCE_DIR}/src/day_3/*.cpp"
+    "${PROJECT_SOURCE_DIR}/src/day_3/*.h")
 
 include(compiler_flags.cmake)
 
-add_executable(${PROJECT_NAME} ${all_SRCS} "src/day_1/day_1_header.h" "src/day_1/day_1_imp.cpp" "src/stdheaders.h" "src/day_2/day_2_header.h" "src/day_2/day_2_imp.cpp")
+add_executable(${PROJECT_NAME} ${all_SRCS})
 
 # Copy the files in the resources directory to the output directory.
 add_custom_command(TARGET ${PROJECT_NAME} PRE_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/resources/ $<TARGET_FILE_DIR:${PROJECT_NAME}>)
