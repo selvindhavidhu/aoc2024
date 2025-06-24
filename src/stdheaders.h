@@ -11,6 +11,7 @@
 #include <iomanip>
 #include <stdexcept>
 #include <numeric>
+#include <iterator>
+#include <regex>
 
 #endif // !SELVIN_AOC2024_STDHEADERS_H_INCLUDED
-
