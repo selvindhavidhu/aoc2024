@@ -2,7 +2,7 @@
 #include "stdheaders.h"
 
 static bool is_increasing(const std::vector<int>& vec) {
-	return std::is_sorted(vec.begin(), vec.end());
+	return std::ranges::is_sorted(vec);
 }
 
 static bool is_decreasing(const std::vector<int>& vec) {
@@ -39,10 +39,10 @@ static bool is_safe_after_removing_single_level(const std::vector<int>& levels) 
 	if (is_safe(levels)) return true;
 
 	// remove one element at a time and check if the list is safe.
-	size_t size = levels.size();
+	const size_t size = levels.size();
 	for (size_t i = 0; i < size; ++i) {
 		std::vector<int> temp(std::begin(levels), std::end(levels));
-		temp.erase(temp.begin() + i);
+		temp.erase(temp.begin() + static_cast<long long int>(i));
 		if (is_safe(temp)) return true;
 	}
 
